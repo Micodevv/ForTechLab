@@ -36,28 +36,23 @@ export function Hero() {
             className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-white border border-border shadow-sm text-sm"
           >
             <Sparkles className="size-4" style={{ color: "#ebae09" }} />
-            {tr({ fr: "ImpactTech · Gouvernance · Innovation", en: "ImpactTech · Governance · Innovation" })}
+            {tr({ fr: "ImpactTech · Transformation numérique · Innovation", en: "ImpactTech · Digital Transformation · Innovation" })}
           </span>
 
           <h1 className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.06]" style={{ fontWeight: 800 }}>
-            {tr({ fr: "Accélérer la ", en: "Powering " })}
-            <span className="relative" style={{ color: "var(--brand-blue)" }}>
+            {tr({ fr: "Construisons l’avenir numérique de l’Afrique ", en: "Let's build Africa's digital future " })}
+            {/* <span className="relative" style={{ color: "var(--brand-blue)" }}>
               {tr({ fr: "performance", en: "performance" })}
               <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
                 <path d="M2 7C50 2 150 2 198 7" stroke="var(--cyan)" strokeWidth="4" strokeLinecap="round" />
               </svg>
-            </span>
-            <br />
-            {tr({
-              fr: "et la transformation en Afrique",
-              en: "and transformation across Africa",
-            })}
+            </span> */}
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
             {tr({
-              fr: "ForTechLab conçoit des solutions numériques innovantes à l'intersection de la gouvernance, de l'innovation et du développement durable — au service des institutions, entreprises et startups africains.",
-              en: "ForTechLab designs innovative digital solutions at the intersection of governance, innovation and sustainable development — serving African institutions, businesses and startups.",
+              fr: "Nous accompagnons les États, les organisations, les entreprises, les startups et les talents dans leur transformation numérique grâce à l’innovation, à la technologie et au développement des compétences.",
+              en: "We support governments, organizations, businesses, startups, and talent in their digital transformation through innovation, technology, and skills development.",
             })}
           </p>
 
@@ -78,7 +73,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 pt-2">
+          {/* <div className="flex items-center gap-3 pt-2">
             <div className="flex -space-x-2">
               {[
                 "photo-1739303987830-ca19742b19bc",
@@ -103,7 +98,7 @@ export function Hero() {
                 {tr({ fr: "500+ professionnels formés · 50+ projets", en: "500+ professionals trained · 50+ projects" })}
               </span>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Visual */}
@@ -127,11 +122,10 @@ export function Hero() {
       <div className="border-y border-border bg-white">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
           {stats.map((s) => (
-            <div key={s.value} className="py-7 px-4 text-center flex flex-col gap-1">
-              <span className="text-3xl lg:text-4xl text-primary" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
-                {s.value}
+            <div key={s.value.fr} className="py-7 px-4 text-center flex items-center justify-center">
+              <span className="text-lg sm:text-xl lg:text-2xl text-primary text-center leading-snug" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
+                {tr(s.value)}
               </span>
-              <span className="text-sm text-muted-foreground">{tr(s.label)}</span>
             </div>
           ))}
         </div>

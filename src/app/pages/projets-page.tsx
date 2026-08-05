@@ -38,9 +38,8 @@ export default function ProjetsPage() {
           {/* Stats */}
           <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10">
             {stats.map((s) => (
-              <div key={s.value}>
-                <p className="text-3xl text-white" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>{s.value}</p>
-                <p className="text-sm text-[var(--navy-foreground)]/60 mt-1">{tr(s.label)}</p>
+              <div key={s.value.fr} className="flex items-center justify-center">
+                <p className="text-lg sm:text-xl md:text-2xl text-white text-center leading-snug" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>{tr(s.value)}</p>
               </div>
             ))}
           </div>

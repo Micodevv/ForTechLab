@@ -1346,11 +1346,11 @@ export const testimonials: Testimonial[] = [
 /* ------------------------------------------------------------------ */
 /* Stats / Process / FAQ                                               */
 /* ------------------------------------------------------------------ */
-export const stats: { value: string; label: Localized }[] = [
-  { value: "10+", label: { fr: "Pays couverts en Afrique", en: "African countries covered" } },
-  { value: "50+", label: { fr: "Projets délivrés", en: "Projects delivered" } },
-  { value: "500+", label: { fr: "Professionnels formés", en: "Professionals trained" } },
-  { value: "B2G/B2B", label: { fr: "Secteurs d'intervention", en: "Sectors served" } },
+export const stats: { value: Localized }[] = [
+  { value: { fr: "Innovation", en: "Innovation" } },
+  { value: { fr: "Technologie", en: "Technology" } },
+  { value: { fr: "Développement des talents", en: "Talent development" } },
+  { value: { fr: "Solutions B2G & B2B", en: "B2G & B2B solutions" } },
 ];
 
 export const processSteps: { title: Localized; desc: Localized }[] = [

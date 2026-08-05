@@ -29,7 +29,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-5 max-w-xs">
-            <Logo />
+            <Logo light/>
             <p className="text-sm leading-relaxed text-[var(--navy-foreground)]/70">
               {tr({
                 fr: "Solutions numériques innovantes à l'intersection de la gouvernance, de l'innovation et du développement durable en Afrique.",
