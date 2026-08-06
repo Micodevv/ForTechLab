@@ -266,8 +266,8 @@ export default function AboutPage() {
                 </p>
                 <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
                   {tr({
-                    fr: "Devenir une venture africaine de référence en ImpactTech, contribuant activement à façonner l'avenir de la gouvernance, des écosystèmes numériques et du développement durable en Afrique.",
-                    en: "To become a leading African ImpactTech venture shaping the future of governance, digital ecosystems and sustainable development across the continent.",
+                    fr: "Être la référence africaine en ImpactTech, en accélérant la transformation numérique au service d’une Afrique plus innovante, plus performante, plus résiliente et plus durable.",
+                    en: "To be Africa's leading reference in ImpactTech, accelerating digital transformation for a more innovative, high-performing, resilient, and sustainable Africa.",
                   })}
                 </p>
               </div>
@@ -291,27 +291,27 @@ export default function AboutPage() {
                 </span>
                 <h2 className="text-3xl mb-5" style={{ fontWeight: 700, color: "var(--navy)" }}>
                   {tr({
-                    fr: "À l'intersection de la gouvernance, du digital et de l'innovation",
-                    en: "At the intersection of governance, digital and innovation",
+                    fr: "À l’intersection de l’innovation, de la technologie et de l’impact",
+                    en: "At the intersection of innovation, technology, and impact",
                   })}
                 </h2>
                 <div className="flex flex-col gap-4 leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
                   <p>
                     {tr({
-                      fr: "ForTechLab est une entreprise qui met la technologie au service d'un impact social et économique durable. Elle conçoit et déploie des solutions numériques innovantes et évolutives au service de la performance et du développement durable sur le continent.",
-                      en: "ForTechLab is an ImpactTech venture designing and deploying scalable digital solutions that drive performance and sustainable development across the continent.",
+                      fr: "ForTechLab est une entreprise ImpactTech qui accompagne les États, les organisations, les entreprises, les startups et les individus dans leur transformation numérique.",
+                      en: "ForTechLab is an ImpactTech company that supports governments, organizations, businesses, startups, and individuals in their digital transformation.",
                     })}
                   </p>
                   <p>
                     {tr({
-                      fr: "Positionnés à l'intersection de la gouvernance, de la transformation digitale et de l'innovation, nous accompagnons tous les acteurs de développement dans la conception de systèmes à fort impact, favorisant une prise de décision éclairée, le renforcement de la redevabilité et l'accélération d'une croissance inclusive.",
-                      en: "Positioned at the intersection of governance, digital transformation and innovation, we partner with all development actors to build high-impact systems that enable smarter decision-making, strengthen accountability and accelerate inclusive growth.",
+                      fr: "Nous concevons et déployons des solutions innovantes, développons les compétences et mobilisons les technologies émergentes pour améliorer la performance, renforcer la gouvernance et accélérer un développement durable et inclusif en Afrique.",
+                      en: "We design and deploy innovative solutions, develop skills, and leverage emerging technologies to improve performance, strengthen governance, and accelerate sustainable, inclusive development across Africa.",
                     })}
                   </p>
                   <p>
                     {tr({
-                      fr: "Nous intervenons à travers les écosystèmes B2G, B2B et startups, en combinant expertise contextuelle approfondie et technologies de pointe pour répondre à des défis complexes de développement.",
-                      en: "Our work spans B2G, B2B and startup ecosystems, where we combine deep contextual expertise with cutting-edge technology to solve complex development challenges.",
+                      fr: "Grâce à une expertise ancrée dans les réalités africaines et alignée sur les meilleures pratiques internationales, nous transformons les défis complexes en opportunités.",
+                      en: "With expertise rooted in African realities and aligned with international best practices, we turn complex challenges into opportunities.",
                     })}
                   </p>
                 </div>

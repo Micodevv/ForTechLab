@@ -11,8 +11,8 @@ const values = [
     iconBgClassName: "bg-cyan-50",
     label: { fr: "Impact", en: "Impact" },
     desc: {
-      fr: "Des solutions générant des résultats concrets et durables",
-      en: "Solutions delivering measurable and lasting change",
+      fr: "Des solutions à impact durable.",
+      en: "Solutions with lasting impact.",
     },
   },
   {
@@ -21,8 +21,8 @@ const values = [
     iconBgClassName: "bg-rose-50",
     label: { fr: "Intégrité", en: "Integrity" },
     desc: {
-      fr: "Transparence, responsabilité et exigence éthique",
-      en: "Transparency, accountability and ethical standards",
+      fr: "La transparence, la responsabilité et l’éthique dans toutes nos actions.",
+      en: "Transparency, responsibility and ethics in everything we do.",
     },
   },
   {
@@ -31,18 +31,18 @@ const values = [
     iconBgClassName: "bg-amber-50",
     label: { fr: "Innovation", en: "Innovation" },
     desc: {
-      fr: "Créativité et technologie pour des problèmes complexes",
-      en: "Creativity and technology to solve complex problems",
+      fr: "La technologie et la créativité au service des défis de demain.",
+      en: "Technology and creativity serving tomorrow’s challenges.",
     },
   },
   {
     icon: Globe,
     iconClassName: "text-emerald-600",
     iconBgClassName: "bg-emerald-50",
-    label: { fr: "Ancrage local", en: "Local ownership" },
+    label: { fr: "Ancrage africain", en: "African anchoring" },
     desc: {
-      fr: "L'expertise africaine au cœur de chaque intervention",
-      en: "African expertise at the heart of every intervention",
+      fr: "Des solutions adaptées aux réalités africaines et aux standards internationaux.",
+      en: "Solutions tailored to African realities and international standards.",
     },
   },
 ];
@@ -110,14 +110,14 @@ export function AboutSection() {
           <div className="flex flex-col gap-4">
             <h2 className="text-[2rem] sm:text-[2.6rem] leading-tight" style={{ fontWeight: 800 }}>
               {tr({
-                fr: "Une venture ImpactTech africaine de référence",
-                en: "A leading African ImpactTech venture",
+                fr: "Une entreprise ImpactTech de référence",
+                en: "A leading ImpactTech company",
               })}
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg max-w-lg">
               {tr({
-                fr: "ForTechLab conçoit et déploie des solutions numériques innovantes à l'intersection de la gouvernance, de l'innovation et du développement durable en Afrique. Positionnés à l'intersection de la gouvernance, de la transformation digitale et de l'innovation, nous accompagnons tous les acteurs de développement (B2G, B2B) dans la conception de systèmes à fort impact.",
-                en: "ForTechLab designs and deploys innovative digital solutions at the intersection of governance, innovation and sustainable development across Africa. Positioned at the intersection of governance, digital transformation and innovation, we partner with all development actors (B2G, B2B) to build high-impact systems.",
+                fr: "Pour une Afrique plus innovante, plus résiliente et plus durable.",
+                en: "Building a more innovative, resilient, and sustainable Africa.",
               })}
             </p>
           </div>

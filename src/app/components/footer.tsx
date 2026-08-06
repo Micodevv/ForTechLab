@@ -32,8 +32,8 @@ export function Footer() {
             <Logo light/>
             <p className="text-sm leading-relaxed text-[var(--navy-foreground)]/70">
               {tr({
-                fr: "Solutions numériques innovantes à l'intersection de la gouvernance, de l'innovation et du développement durable en Afrique.",
-                en: "Innovative digital solutions at the intersection of governance, innovation and sustainable development in Africa.",
+                fr: "Entreprise ImpactTech africaine au service de la transformation numérique et du développement durable.",
+                en: "African ImpactTech company driving digital transformation and sustainable development.",
               })}
             </p>
             <div className="flex gap-2">

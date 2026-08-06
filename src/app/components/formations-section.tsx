@@ -19,8 +19,8 @@ export function FormationsSection() {
           eyebrow={tr({ fr: "Académie ForTechLab", en: "ForTechLab Academy" })}
           title={tr({ fr: "Des formations numériques pour transformer votre carrière", en: "Digital training to transform your career" })}
           subtitle={tr({
-            fr: "Des parcours intensifs sur les compétences numériques clés — cybersécurité, data, cloud, DevOps, UI/UX — encadrés par des experts africains et internationaux.",
-            en: "Intensive programs on key digital skills — cybersecurity, data, cloud, DevOps, UI/UX — led by African and international experts.",
+            fr: "Des parcours intensifs sur les compétences numériques clés — cybersécurité, data, cloud, DevOps, UI/UX, etc — encadrés par des experts africains et internationaux.",
+            en: "Intensive programs on key digital skills — cybersecurity, data, cloud, DevOps, UI/UX, etc — led by African and international experts.",
           })}
         />
 
@@ -93,28 +93,58 @@ export function FormationsSection() {
           ))}
         </div>
 
-        {/* "Plus de formations" button */}
-        <motion.div
-          // initial={{ opacity: 0, y: 16 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          // viewport={{ once: true }}
-          // transition={{ duration: 0.4, delay: 0.3 }}
-          className="mt-12 flex flex-col items-center gap-3"
-        >
+        <motion.div className="mt-8 flex flex-col items-center gap-3 text-center">
           <p className="text-sm text-muted-foreground">
             {tr({
-              fr: `Et ${formations.length - PREVIEW_COUNT} autres parcours dans 6 domaines numériques`,
-              en: `And ${formations.length - PREVIEW_COUNT} more programs across 6 digital domains`,
+              fr: "Pour plus de formations, cliquez sur le bouton ci-dessous",
+              en: "For more training programs, click the button below",
             })}
           </p>
           <Link
             to="/formations"
-            className="inline-flex items-center gap-2 rounded-full h-12 px-8 text-sm text-white transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 text-sm text-white transition-opacity hover:opacity-90"
             style={{ background: "var(--primary)", fontWeight: 600 }}
           >
             {tr({ fr: "Explorer l'Académie ForTechLab", en: "Explore ForTechLab Academy" })}
             <ChevronRight className="size-4" />
           </Link>
+        </motion.div>
+
+        <motion.div
+          className="relative mt-12 overflow-hidden rounded-[2rem] p-7 sm:p-8 shadow-2xl shadow-primary/20"
+          style={{
+            background: "linear-gradient(135deg, var(--primary) 0%, #0f4c81 100%)",
+            color: "white",
+          }}
+        >
+          <div className="absolute -top-10 -left-10 size-32 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute -bottom-8 right-0 size-40 rounded-full bg-cyan-300/20 blur-3xl" />
+          <div className="absolute inset-0 border border-white/10 rounded-[2rem]" />
+
+          <div className="relative flex flex-col items-center text-center gap-6 lg:items-center">
+            <div className="max-w-2xl">
+              <h3 className="text-xl" style={{ fontWeight: 700, color: "white" }}>
+                {tr({ fr: "Vous êtes une entreprise ou une institution ?", en: "Are you a business or institution?" })}
+              </h3>
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-white/90">
+                {tr({
+                  fr: "Ces formations sont également disponibles en version sur mesure pour les administrations publiques, les ONG, les organisations internationales et les entreprises.",
+                  en: "These trainings are also available as tailored programs for public administrations, NGOs, international organizations and businesses.",
+                })}
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:justify-center gap-3 mt-auto">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-6 text-sm border border-white/30 bg-white text-foreground transition-colors hover:bg-secondary"
+                style={{ fontWeight: 600 }}
+              >
+                {tr({ fr: "Demandez un devis personnalisé", en: "Request a customized quote" })}
+                <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

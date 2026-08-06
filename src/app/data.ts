@@ -1347,10 +1347,10 @@ export const testimonials: Testimonial[] = [
 /* Stats / Process / FAQ                                               */
 /* ------------------------------------------------------------------ */
 export const stats: { value: Localized }[] = [
-  { value: { fr: "Innovation", en: "Innovation" } },
-  { value: { fr: "Technologie", en: "Technology" } },
+  { value: { fr: "Présence panafricaine", en: "Pan-African presence" } },
+  { value: { fr: "Innovation appliquée", en: "Applied innovation" } },
+  { value: { fr: "Expertise B2G & B2B", en: "B2G & B2B expertise" } },
   { value: { fr: "Développement des talents", en: "Talent development" } },
-  { value: { fr: "Solutions B2G & B2B", en: "B2G & B2B solutions" } },
 ];
 
 export const processSteps: { title: Localized; desc: Localized }[] = [
