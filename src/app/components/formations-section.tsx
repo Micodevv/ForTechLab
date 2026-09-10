@@ -51,14 +51,14 @@ export function FormationsSection() {
               <h3 className="mb-1.5" style={{ fontWeight: 600 }}>{tr(f.title)}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[40px]">{tr(f.tagline)}</p>
 
-              <div className="flex items-baseline gap-1 mb-1">
+              {/* <div className="flex items-baseline gap-1 mb-1">
                 <span className="text-xs text-muted-foreground">{t("common.from")}</span>
               </div>
               <div className="mb-5">
                 <span className="text-2xl text-foreground" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
                   {formatPrice(f.price)}
                 </span>
-              </div>
+              </div> */}
 
               <div className="flex flex-col gap-2 text-sm text-muted-foreground mb-5 pb-5 border-b border-border">
                 <span className="flex items-center gap-2">

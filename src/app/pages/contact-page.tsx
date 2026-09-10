@@ -8,7 +8,7 @@ export default function ContactPage() {
   const { tr } = useI18n();
 
   const info = [
-    { icon: Mail, label: { fr: "Email", en: "Email" }, value: "contact@fortechlab.com", href: "mailto:contact@fortechlab.com" },
+    { icon: Mail, label: { fr: "Email", en: "Email" }, value: "contact@fortechlab.net", href: "mailto:contact@fortechlab.net" },
     { icon: MapPin, label: { fr: "Adresse", en: "Address" }, value: tr({ fr: "Cotonou, Bénin", en: "Cotonou, Benin" }), href: null },
     { icon: Clock, label: { fr: "Horaires", en: "Hours" }, value: tr({ fr: "Lun – Ven, 9h – 18h", en: "Mon – Fri, 9am – 6pm" }), href: null },
   ];

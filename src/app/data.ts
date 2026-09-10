@@ -1402,8 +1402,8 @@ export const faqs: { q: Localized; a: Localized }[] = [
   {
     q: { fr: "Obtient-on une certification ?", en: "Do learners get a certification?" },
     a: {
-      fr: "Oui, chaque parcours débouche sur un certificat Fortechlab attestant des compétences acquises et un projet ajouté à votre portfolio.",
-      en: "Yes, every program leads to a Fortechlab certificate attesting your skills, plus a project for your portfolio.",
+      fr: "Oui, chaque parcours débouche sur un certificat de Fortechlab attestant des compétences acquises et un projet ajouté à votre portfolio.",
+      en: "Yes, every learning path leads to a Fortechlab certificate validating the skills acquired, as well as a project added to your portfolio.",
     },
   },
   {

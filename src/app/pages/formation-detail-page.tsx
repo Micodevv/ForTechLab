@@ -59,7 +59,7 @@ export default function FormationDetailPage() {
               <div className="flex flex-col gap-2.5 mb-6 text-sm">
                 <span className="flex items-center gap-2"><Clock className="size-4 text-primary" />{tr(formation.duration)}</span>
                 <span className="flex items-center gap-2"><Users className="size-4 text-primary" />{tr({ fr: "Mentor dédié & projets réels", en: "Dedicated mentor & real projects" })}</span>
-                <span className="flex items-center gap-2"><Award className="size-4 text-primary" />{tr({ fr: "Certificat Fortechlab", en: "Fortechlab certificate" })}</span>
+                <span className="flex items-center gap-2"><Award className="size-4 text-primary" />{tr({ fr: "Certificat de fin formation ForTechLab", en: "ForTechLab Certificate of Completion" })}</span>
               </div>
               <Button asChild className="rounded-full w-full h-12">
                 <a href="#inscription">{t("cta.enroll")}</a>

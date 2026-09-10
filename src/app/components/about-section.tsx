@@ -110,8 +110,8 @@ export function AboutSection() {
           <div className="flex flex-col gap-4">
             <h2 className="text-[2rem] sm:text-[2.6rem] leading-tight" style={{ fontWeight: 800 }}>
               {tr({
-                fr: "Une entreprise ImpactTech de référence",
-                en: "A leading ImpactTech company",
+                fr: "Concevoir des technologies et des solutions fondées sur les données qui génèrent un impact durable pour l’Afrique.",
+                en: "Building technology and data-driven solutions that create lasting impact for Africa.",
               })}
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg max-w-lg">

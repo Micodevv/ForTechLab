@@ -161,7 +161,7 @@ export default function FormationsPage() {
                           </span>
                           <span className="flex items-center gap-2">
                             <Award className="size-4 text-primary" />
-                            {tr({ fr: "Certificat Fortechlab", en: "Fortechlab certificate" })}
+                            {tr({ fr: "Certificat de fin formation ForTechLab", en: "ForTechLab Certificate of Completion" })}
                           </span>
                         </div>
                       </div>

@@ -1,5 +1,6 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { Send, CheckCircle2, User, Mail, Phone, MessageSquare, Tag } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "./ui/button";
 import { useI18n } from "../i18n";
 
@@ -17,6 +18,8 @@ export function ContactForm({
   const { t, tr } = useI18n();
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const subjectLabel = tr({
     join: { fr: "Domaine d'expertise", en: "Area of expertise" },
@@ -45,13 +48,43 @@ export function ContactForm({
     },
   }[variant]);
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError(null);
+
+    if (!formRef.current) {
       setLoading(false);
-      setSent(true);
-    }, 900);
+      setError(tr({ fr: "Formulaire introuvable.", en: "Form not found." }));
+      return;
+    }
+
+    // Envoi via EmailJS: service, template, form, clé publique
+    emailjs
+      .sendForm(
+        "service_wvuukwn",
+        "template_7irdv6j",
+        formRef.current,
+        "LHb5IHInYckZM3EK2"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSent(true);
+          try {
+            formRef.current?.reset();
+          } catch (err) {
+            // ignore
+          }
+        },
+        (err) => {
+          setLoading(false);
+          setError(
+            tr({ fr: "Erreur lors de l'envoi. Réessayez.", en: "Error sending message. Please try again." })
+          );
+          console.error("EmailJS error:", err);
+        }
+      );
   };
 
   if (sent) {
@@ -77,7 +110,7 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4">
+    <form ref={formRef} onSubmit={onSubmit} className="flex flex-col gap-4">
       {context && (
         <div className="flex items-center gap-2.5 text-sm px-4 py-5 rounded-xl bg-navy border border-navy/20 text-white">
           <Tag className="size-5 shrink-0" />
@@ -93,6 +126,7 @@ export function ContactForm({
         >
           <input
             id="name"
+            name="user_name"
             required
             placeholder={t("form.placeholder.name")}
             className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
@@ -106,6 +140,7 @@ export function ContactForm({
         >
           <input
             id="email"
+            name="user_email"
             type="email"
             required
             placeholder="email@exemple.com"
@@ -120,6 +155,7 @@ export function ContactForm({
         >
           <input
             id="phone"
+            name="user_phone"
             type="tel"
             placeholder="+229"
             className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
@@ -133,6 +169,7 @@ export function ContactForm({
         >
           <input
             id="subject"
+            name="subject"
             required
             placeholder={subjectLabel}
               className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
@@ -143,12 +180,23 @@ export function ContactForm({
       <FloatingField label={messageLabel} htmlFor="message" icon={MessageSquare}>
         <textarea
           id="message"
+          name="message"
           required
           rows={5}
           placeholder={messagePlaceholder}
           className="peer w-full rounded-xl border border-navy/20 px-4 pl-10 py-3 text-sm outline-none"
         />
       </FloatingField>
+
+      {context && (
+        <input type="hidden" name="context" value={context} />
+      )}
+
+      {error && (
+        <div className="text-sm text-destructive bg-destructive/10 px-4 py-2 rounded-md">
+          {error}
+        </div>
+      )}
 
       <div className="flex items-center justify-between pt-1">
         <p className="text-xs text-muted-foreground">
