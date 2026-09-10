@@ -62,10 +62,10 @@ export function ContactForm({
     // Envoi via EmailJS: service, template, form, clé publique
     emailjs
       .sendForm(
-        "service_wvuukwn",
-        "template_7irdv6j",
+        "service_pea6hlq",
+        "template_cxamro8",
         formRef.current,
-        "LHb5IHInYckZM3EK2"
+        "GsbIytjKZ5PawDXoU"
       )
       .then(
         () => {
