@@ -12,7 +12,7 @@ export function FormationsSection() {
   const preview = formations.slice(0, PREVIEW_COUNT);
 
   return (
-    <section id="formations" className="py-20 lg:py-28 bg-secondary/50 scroll-mt-20">
+    <section id="formations" className="py-10 lg:py-12 bg-secondary/50 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           align="center"

@@ -35,7 +35,7 @@ export function JoinSection() {
   ];
 
   return (
-    <section id="rejoindre" className="py-20 lg:py-28 bg-secondary/50 scroll-mt-20">
+    <section id="rejoindre" className="py-20 lg:py-16  bg-secondary/50 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

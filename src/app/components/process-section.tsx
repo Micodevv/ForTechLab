@@ -10,7 +10,7 @@ export function ProcessSection() {
   const { tr } = useI18n();
 
   return (
-    <section className="py-20 lg:py-28 bg-[var(--navy)] text-[var(--navy-foreground)] relative overflow-hidden">
+    <section className="py-20 lg:py-15 bg-[var(--navy)] text-[var(--navy-foreground)] relative overflow-hidden">
       <div className="absolute -top-20 right-0 size-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute bottom-0 left-1/4 size-72 rounded-full bg-[var(--cyan)]/10 blur-3xl" />
 

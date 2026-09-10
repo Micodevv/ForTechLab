@@ -13,14 +13,14 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-20">
         <div className="absolute -top-32 right-0 size-[600px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 size-96 rounded-full bg-[var(--cyan)]/8 blur-3xl pointer-events-none" />
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <div className="max-w-3xl">
             <Eyebrow light>{tr({ fr: "Nos Services", en: "Our Services" })}</Eyebrow>
             <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
-              {tr({ fr: "Tout ce qu'il faut pour réussir en ligne", en: "Everything you need to succeed online" })}
+              {tr({ fr: "Construisons ensemble votre avenir numérique", en: "Together, We Build Your Digital Future" })}
             </h1>
             <p className="mt-5 text-[var(--navy-foreground)]/75 text-lg leading-relaxed max-w-2xl">
               {tr({
@@ -59,7 +59,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow={tr({ fr: "Ce que nous faisons", en: "What we do" })}

@@ -28,7 +28,7 @@ export default function FormationsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-20">
         <div className="absolute -top-40 right-0 size-[700px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/3 size-80 rounded-full bg-[var(--cyan)]/10 blur-3xl pointer-events-none" />
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">

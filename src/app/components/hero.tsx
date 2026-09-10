@@ -25,7 +25,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-center">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-10 pb-0 lg:pt-24 lg:pb-18 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

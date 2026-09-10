@@ -31,13 +31,13 @@ export function SectionHeading({
     <div className={`flex flex-col gap-4 ${align === "center" ? "items-center text-center mx-auto max-w-2xl" : "max-w-2xl"}`}>
       {eyebrow && <Eyebrow light={light}>{eyebrow}</Eyebrow>}
       <h2
-        className={`text-[2rem] md:text-[2.6rem] leading-[1.08] ${light ? "text-white" : "text-foreground"}`}
+        className={`text-[2rem] md:text-[2.3rem] leading-[1.08] ${light ? "text-white" : "text-foreground"}`}
         style={{ fontWeight: 700 }}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className={`text-[1.05rem] leading-relaxed ${light ? "text-[var(--navy-foreground)]/80" : "text-muted-foreground"}`}>
+        <p className={`text-[1.rem] leading-relaxed ${light ? "text-[var(--navy-foreground)]/80" : "text-muted-foreground"}`}>
           {subtitle}
         </p>
       )}

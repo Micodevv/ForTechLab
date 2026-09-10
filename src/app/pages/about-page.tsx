@@ -163,7 +163,7 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 lg:py-16 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* ABOUT CONTENT */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
             {/* Left: sticky image + ambition */}
@@ -287,7 +287,7 @@ export default function AboutPage() {
                   className="inline-block mb-4 px-3 py-1 rounded-full text-xs tracking-widest uppercase"
                   style={{ background: "var(--secondary)", color: "var(--brand-blue)", fontFamily: "var(--font-mono)" }}
                 >
-                  {tr({ fr: "Qui nous sommes", en: "Who we are" })}
+                  {tr({ fr: "Qui sommes-nous?", en: "Who we are?" })}
                 </span>
                 <h2 className="text-3xl mb-5" style={{ fontWeight: 700, color: "var(--navy)" }}>
                   {tr({

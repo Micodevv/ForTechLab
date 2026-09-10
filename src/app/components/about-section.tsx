@@ -51,7 +51,7 @@ export function AboutSection() {
   const { tr } = useI18n();
 
   return (
-    <section id="a-propos" className="py-20 lg:py-28 scroll-mt-20 overflow-hidden">
+    <section id="a-propos" className="py-20 lg:py-10 scroll-mt-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
 
         {/* Tag */}
@@ -72,7 +72,7 @@ export function AboutSection() {
         </motion.div>
 
         {/* Image + content grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-30">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -110,14 +110,14 @@ export function AboutSection() {
           <div className="flex flex-col gap-4">
             <h2 className="text-[2rem] sm:text-[2.6rem] leading-tight" style={{ fontWeight: 800 }}>
               {tr({
-                fr: "Concevoir des technologies et des solutions fondées sur les données qui génèrent un impact durable pour l’Afrique.",
-                en: "Building technology and data-driven solutions that create lasting impact for Africa.",
+                fr: "Un acteur de référence de l'ImpactTech",
+                en: "A leading ImpactTech player",
               })}
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg max-w-lg">
               {tr({
-                fr: "Pour une Afrique plus innovante, plus résiliente et plus durable.",
-                en: "Building a more innovative, resilient, and sustainable Africa.",
+                fr: "Concevoir des technologies et des solutions fondées sur les données qui génèrent un impact durable pour l’Afrique.",
+                en: "Building technology and data-driven solutions that create lasting impact for Africa.",
               })}
             </p>
           </div>

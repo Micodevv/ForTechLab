@@ -12,7 +12,7 @@ export function FaqSection() {
   const { tr } = useI18n();
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-14">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <SectionHeading
           align="center"

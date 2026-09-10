@@ -29,7 +29,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-5 max-w-xs">
-            <Logo />
+            <Logo light/>
             <p className="text-sm leading-relaxed text-[var(--navy-foreground)]/70">
               {tr({
                 fr: "Entreprise ImpactTech africaine au service de la transformation numérique et du développement durable.",
@@ -70,7 +70,7 @@ export function Footer() {
             <ContactItem icon={Mail}>contact@fortechlab.net</ContactItem>
             {/* <ContactItem icon={Phone}>+229 01 96 14 72 30</ContactItem> */}
             <ContactItem icon={MapPin}>
-              {tr({ fr: "Cotonou, Bénin", en: "Cotonou, Benin" })}
+              {tr({ fr: "Porto-Novo, Bénin", en: "Porto-Novo, Benin" })}
             </ContactItem>
           </FooterCol>
         </div>

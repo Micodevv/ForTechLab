@@ -6,7 +6,7 @@ export function CtaBand() {
   const { t, tr } = useI18n();
 
   return (
-    <section className="py-16 lg:py-20">
+    <section className="py-16 lg:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-navy px-8 py-14 lg:px-16 lg:py-20 text-center">
           {/* decorative */}
