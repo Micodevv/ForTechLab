@@ -6,7 +6,7 @@ export function Eyebrow({ children, light = false }: { children: ReactNode; ligh
       className={`inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] ${
         light ? "text-[var(--cyan)]" : "text-primary"
       }`}
-      style={{ fontFamily: "var(--font-mono)" }}
+      style={{ fontFamily: "var(--font-sans)" }}
     >
       <span className="size-1.5 rounded-full bg-current" />
       {children}

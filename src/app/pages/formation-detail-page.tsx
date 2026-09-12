@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from "react-router";
-import { motion } from "motion/react";
 import { Check, Clock, BarChart3, ArrowLeft, Award, Users } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Eyebrow } from "../components/section-heading";
@@ -48,7 +47,7 @@ export default function FormationDetailPage() {
             </div>
 
             {/* price card */}
-            <div className="rounded-3xl bg-white text-foreground p-7 shadow-2xl shadow-black/30">
+            <div className="rounded-3xl bg-white text-foreground p-7">
               <p className="text-sm text-muted-foreground">{t("common.from")}</p>
               <p className="text-3xl text-primary mt-1 mb-1" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
                 {formatPrice(formation.price)}
@@ -70,7 +69,7 @@ export default function FormationDetailPage() {
       </section>
 
       {/* Modules — presented as pricing plan cards */}
-      <section className="py-12 lg:py-12 bg-secondary/40">
+      <section className="py-12 lg:py-12" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
@@ -86,19 +85,12 @@ export default function FormationDetailPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {tr(formation.modules).map((m, i) => (
-              <motion.div
-                key={m.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="relative flex flex-col rounded-3xl border border-border bg-card p-6"
-              >
+              <div key={m.name} className="relative flex flex-col rounded-3xl border border-border bg-card p-6">
                 {/* Module number badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className="grid place-items-center size-9 rounded-xl bg-primary/10 text-primary shrink-0 text-sm"
-                    style={{ fontFamily: "var(--font-mono)", fontWeight: 700 }}
+                    style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -114,7 +106,7 @@ export default function FormationDetailPage() {
                 {/* Learn items */}
                 {m.learn && m.learn.length > 0 && (
                   <div className="mt-auto pt-4 border-t border-border">
-                    <p className="text-xs text-muted-foreground mb-3" style={{ fontFamily: "var(--font-mono)" }}>
+                    <p className="text-xs text-muted-foreground mb-3" style={{ fontFamily: "var(--font-sans)" }}>
                       {tr({ fr: "Au programme", en: "In this module" })}
                     </p>
                     <ul className="flex flex-col gap-2">
@@ -127,7 +119,7 @@ export default function FormationDetailPage() {
                     </ul>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -148,7 +140,7 @@ export default function FormationDetailPage() {
               })}
             </p>
           </div>
-          <div className="rounded-3xl bg-card border border-border p-7 sm:p-9 shadow-xl shadow-primary/5">
+          <div className="rounded-3xl bg-card border border-border p-7 sm:p-9">
             <ContactForm
               variant="formation"
               context={`${tr({ fr: "Formation", en: "Training" })}: ${tr(formation.title)} — ${formatPrice(formation.price)}`}

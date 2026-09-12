@@ -1,5 +1,4 @@
-import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { Eyebrow } from "../components/section-heading";
 import { ContactForm } from "../components/contact-form";
 import { useI18n } from "../i18n";
@@ -17,8 +16,6 @@ export default function ContactPage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-16 lg:py-24">
-        <div className="absolute -top-32 right-0 size-[500px] rounded-full bg-primary/25 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 size-72 rounded-full bg-[var(--cyan)]/8 blur-3xl pointer-events-none" />
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "Contactez-nous", en: "Contact us" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.6rem] md:text-[3.8rem] leading-[1.05]" style={{ fontWeight: 800 }}>
@@ -44,13 +41,8 @@ export default function ContactPage() {
             <h2 className="text-xl mb-2" style={{ fontWeight: 700 }}>
               {tr({ fr: "Informations de contact", en: "Contact information" })}
             </h2>
-            {info.map((item, i) => (
-              <motion.div
-                key={item.value}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+            {info.map((item) => (
+              <div key={item.value}>
                 {item.href ? (
                   <a
                     href={item.href}
@@ -75,30 +67,22 @@ export default function ContactPage() {
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
 
            
           </div>
 
           {/* Right: form */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl bg-card border border-border p-7 sm:p-10 shadow-2xl shadow-primary/5"
-          >
+          <div className="rounded-3xl bg-card border border-border p-7 sm:p-10">
             <div className="flex items-center gap-3 mb-7">
-              <div className="grid place-items-center size-11 rounded-xl bg-primary text-primary-foreground shrink-0">
-                <MessageSquare className="size-5" />
-              </div>
               <div>
                 <h3 style={{ fontWeight: 700 }}>{tr({ fr: "Envoyez-nous un message", en: "Send us a message" })}</h3>
                 <p className="text-xs text-muted-foreground">{tr({ fr: "Tous les champs * sont obligatoires", en: "All * fields are required" })}</p>
               </div>
             </div>
             <ContactForm variant="general" />
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

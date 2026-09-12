@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { motion } from "motion/react";
 import {
   ArrowRight,
   Target,
@@ -137,51 +136,21 @@ export default function AboutPage() {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(135deg, var(--navy) 0%, #0d3d6b 60%, #0a2f52 100%)",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-[0.07]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
-              backgroundSize: "48px 48px",
-            }}
-          />
-          <div
-            className="absolute -right-32 top-0 size-[500px] rounded-full blur-3xl opacity-20"
-            style={{ background: "var(--brand-blue)" }}
-          />
-          <div
-            className="absolute -left-32 bottom-0 size-[400px] rounded-full blur-3xl opacity-15"
-            style={{ background: "var(--cyan)" }}
-          />
-        </div>
-
+      <section className="relative overflow-hidden bg-white text-foreground">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 lg:py-16 grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-6"
-          >
+          <div className="flex flex-col gap-6">
             <span
               className="inline-block self-start px-3.5 py-1 rounded-full text-xs tracking-widest uppercase"
               style={{
-                background: "rgba(255,255,255,0.12)",
-                color: "var(--cyan)",
-                fontFamily: "var(--font-mono)",
+                background: "var(--secondary)",
+                color: "var(--primary)",
+                fontFamily: "var(--font-sans)",
               }}
             >
               {tr({ fr: "À propos de ForTechLab", en: "About ForTechLab" })}
             </span>
             <h1
-              className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.06]"
+              className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.06] text-foreground"
               style={{ fontWeight: 800 }}
             >
               {tr({
@@ -189,7 +158,7 @@ export default function AboutPage() {
                 en: "Technology in service of sustainable impact in Africa",
               })}
             </h1>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-foreground/80">
               {tr({
                 fr: "ForTechLab est une entreprise ImpactTech qui conçoit et déploie des solutions numériques innovantes et évolutives au service de la performance et du développement durable sur le continent.",
                 en: "ForTechLab is an ImpactTech venture designing and deploying scalable digital solutions that drive performance and sustainable development across the continent.",
@@ -205,31 +174,22 @@ export default function AboutPage() {
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 rounded-full h-12 px-7 text-sm border transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full h-12 px-7 text-sm border border-border bg-transparent text-foreground transition-colors hover:bg-secondary"
               >
                 {tr({ fr: "Nos services", en: "Our services" })}
               </Link>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative"
-          >
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl">
+          <div className="relative">
+            <div className="rounded-[2rem] overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&h=680&fit=crop&auto=format&q=80"
                 alt={tr({ fr: "Professionnels africains au travail", en: "African professionals at work" })}
                 className="w-full h-[420px] lg:h-[500px] object-cover"
               />
             </div>
-            <div
-              className="absolute -bottom-5 -right-5 size-20 rounded-3xl -z-10 rotate-12"
-              style={{ background: "var(--cyan)", opacity: 0.6 }}
-            />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -238,14 +198,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
             {/* Left: sticky image + ambition */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:sticky lg:top-28"
-            >
-              <div className="rounded-[2rem] overflow-hidden mb-6" style={{ boxShadow: "0 20px 60px -16px rgba(13,39,72,0.18)" }}>
+            <div className="lg:sticky lg:top-28">
+              <div className="rounded-[2rem] overflow-hidden mb-6">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=900&h=700&fit=crop&auto=format&q=80"
                   alt={tr({ fr: "Équipe ForTechLab en réunion", en: "ForTechLab team in meeting" })}
@@ -256,36 +210,30 @@ export default function AboutPage() {
               {/* Ambition card */}
               <div
                 className="rounded-2xl p-6"
-                style={{ background: "var(--navy)", color: "white" }}
+                style={{ background: "#f3f6f8", color: "var(--foreground)" }}
               >
                 <p
                   className="text-xs uppercase tracking-widest mb-3"
-                  style={{ color: "var(--cyan)", fontFamily: "var(--font-mono)" }}
+                  style={{ color: "var(--primary)", fontFamily: "var(--font-sans)" }}
                 >
                   {tr({ fr: "Notre ambition", en: "Our ambition" })}
                 </p>
-                <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
+                <p className="leading-relaxed" style={{ color: "#475467" }}>
                   {tr({
                     fr: "Être la référence africaine en ImpactTech, en accélérant la transformation numérique au service d’une Afrique plus innovante, plus performante, plus résiliente et plus durable.",
                     en: "To be Africa's leading reference in ImpactTech, accelerating digital transformation for a more innovative, high-performing, resilient, and sustainable Africa.",
                   })}
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: content */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col gap-12"
-            >
+            <div className="flex flex-col gap-12">
               {/* Who we are */}
               <div>
                 <span
                   className="inline-block mb-4 px-3 py-1 rounded-full text-xs tracking-widest uppercase"
-                  style={{ background: "var(--secondary)", color: "var(--brand-blue)", fontFamily: "var(--font-mono)" }}
+                  style={{ background: "var(--secondary)", color: "var(--brand-blue)", fontFamily: "var(--font-sans)" }}
                 >
                   {tr({ fr: "Qui sommes-nous?", en: "Who we are?" })}
                 </span>
@@ -316,48 +264,44 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>              
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* VALUES SECTION */}
-      <section className="py-20 lg:py-24" style={{ background: "var(--navy)" }}>
+      <section className="py-20 lg:py-24" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="text-center mb-14">
             <span
               className="inline-block mb-4 px-3.5 py-1 rounded-full text-xs tracking-widest uppercase"
-              style={{ background: "rgba(255,255,255,0.1)", color: "var(--cyan)", fontFamily: "var(--font-mono)" }}
+              style={{ background: "rgba(18,141,183,0.08)", color: "var(--primary)", fontFamily: "var(--font-sans)" }}
             >
               {tr({ fr: "Ce en quoi nous croyons", en: "What we believe in" })}
             </span>
-            <h2 className="text-[2rem] sm:text-[2.5rem] text-white" style={{ fontWeight: 700 }}>
+            <h2 className="text-[2rem] sm:text-[2.5rem] text-foreground" style={{ fontWeight: 700 }}>
               {tr({ fr: "Nos valeurs fondamentales", en: "Our core values" })}
             </h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {values.map((v, i) => (
-              <motion.div
+            {values.map((v) => (
+              <div
                 key={v.title.fr}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.45, delay: i * 0.1 }}
                 className="flex flex-col gap-4 p-6 rounded-2xl"
-                style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}
+                style={{ background: "#ffffff", border: "1px solid rgba(17,24,39,0.08)" }}
               >
                 <div
                   className="size-12 rounded-xl grid place-items-center"
-                  style={{ background: "rgba(255,255,255,0.1)" }}
+                  style={{ background: "rgba(18,141,183,0.08)" }}
                 >
-                  <v.icon className="size-6" style={{ color: "var(--cyan)" }} />
+                  <v.icon className="size-6" style={{ color: "var(--primary)" }} />
                 </div>
-                <h3 className="text-white" style={{ fontWeight: 700 }}>{tr(v.title)}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+                <h3 className="text-foreground" style={{ fontWeight: 700 }}>{tr(v.title)}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#556372" }}>
                   {tr(v.desc)}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

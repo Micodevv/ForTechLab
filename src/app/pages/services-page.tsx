@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { motion } from "motion/react";
 import { Check, ArrowRight, ArrowUpRight, MessageSquare } from "lucide-react";
 import { SectionHeading, Eyebrow } from "../components/section-heading";
 import { ContactForm } from "../components/contact-form";
@@ -14,8 +13,6 @@ export default function ServicesPage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-20">
-        <div className="absolute -top-32 right-0 size-[600px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 size-96 rounded-full bg-[var(--cyan)]/8 blur-3xl pointer-events-none" />
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <div className="max-w-3xl">
             <Eyebrow light>{tr({ fr: "Nos Services", en: "Our Services" })}</Eyebrow>
@@ -71,15 +68,8 @@ export default function ServicesPage() {
           />
 
           <div className="mt-14 flex flex-col gap-6">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.id}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="group rounded-3xl border border-border bg-card p-7 sm:p-9"
-              >
+            {services.map((s) => (
+              <div key={s.id} className="group rounded-3xl border border-border bg-card p-7 sm:p-9">
                 <div className="grid md:grid-cols-[auto_1fr_auto] gap-6 md:gap-10 items-start">
                   {/* Icon + title */}
                   <div className="flex items-start gap-4">
@@ -110,7 +100,7 @@ export default function ServicesPage() {
                     {tr({ fr: "Démarrer un projet", en: "Start a project" })} <ArrowUpRight className="size-4" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -120,15 +110,10 @@ export default function ServicesPage() {
       <ProcessSection />
 
       {/* Contact section */}
-      <section className="py-20 lg:py-28 bg-secondary/50">
+      <section className="py-20 lg:py-28" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:sticky lg:top-28 flex flex-col gap-5"
-            >
+            <div className="lg:sticky lg:top-28 flex flex-col gap-5">
               <Eyebrow>{tr({ fr: "Démarrons ensemble", en: "Let's get started" })}</Eyebrow>
               <h2 className="text-[2.2rem] leading-[1.1]" style={{ fontWeight: 700 }}>
                 {tr({ fr: "Un projet en tête ?", en: "Have a project in mind?" })}
@@ -152,16 +137,11 @@ export default function ServicesPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-3xl bg-card border border-border p-7 sm:p-9 shadow-xl shadow-primary/5"
-            >
+            <div className="rounded-3xl bg-card border border-border p-7 sm:p-9">
               <ContactForm variant="general" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

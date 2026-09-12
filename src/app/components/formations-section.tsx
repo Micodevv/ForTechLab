@@ -1,9 +1,8 @@
 import { Link } from "react-router";
-import { motion } from "motion/react";
 import { Check, ArrowRight, Clock, BarChart3, ChevronRight } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "../i18n";
-import { formations, formatPrice } from "../data";
+import { formations } from "../data";
 
 const PREVIEW_COUNT = 4;
 
@@ -12,7 +11,7 @@ export function FormationsSection() {
   const preview = formations.slice(0, PREVIEW_COUNT);
 
   return (
-    <section id="formations" className="py-10 lg:py-12 bg-secondary/50 scroll-mt-20">
+    <section id="formations" className="py-10 lg:py-12 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           align="center"
@@ -25,21 +24,15 @@ export function FormationsSection() {
         />
 
         <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {preview.map((f, i) => (
-            <motion.div
+          {preview.map((f) => (
+            <div
               key={f.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              // transition={{ duration: 0.45, delay: i * 0.08 }}
-              className={`relative flex flex-col rounded-3xl border bg-card p-7  ${
-                f.popular
-                  ? "border-primary shadow-2xl shadow-primary/20 ring-1 ring-primary"
-                  : "border-border hover:shadow-xl hover:shadow-primary/5"
+              className={`relative flex flex-col rounded-[1rem] border bg-card p-6 ${
+                f.popular ? "border-border ring-0" : "border-border"
               }`}
             >
               {f.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs whitespace-nowrap" style={{ fontFamily: "var(--font-mono)" }}>
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs whitespace-nowrap" style={{ fontFamily: "var(--font-sans)" }}>
                   {t("common.popular")}
                 </span>
               )}
@@ -50,15 +43,6 @@ export function FormationsSection() {
 
               <h3 className="mb-1.5" style={{ fontWeight: 600 }}>{tr(f.title)}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[40px]">{tr(f.tagline)}</p>
-
-              {/* <div className="flex items-baseline gap-1 mb-1">
-                <span className="text-xs text-muted-foreground">{t("common.from")}</span>
-              </div>
-              <div className="mb-5">
-                <span className="text-2xl text-foreground" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
-                  {formatPrice(f.price)}
-                </span>
-              </div> */}
 
               <div className="flex flex-col gap-2 text-sm text-muted-foreground mb-5 pb-5 border-b border-border">
                 <span className="flex items-center gap-2">
@@ -80,7 +64,7 @@ export function FormationsSection() {
 
               <Link
                 to={`/formation/${f.id}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full mt-auto w-full h-10 text-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full mt-auto w-full h-10 text-sm"
                 style={
                   f.popular
                     ? { background: "var(--primary)", color: "white", fontWeight: 600 }
@@ -89,11 +73,11 @@ export function FormationsSection() {
               >
                 {t("cta.learnMore")} <ArrowRight className="size-4" />
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div className="mt-8 flex flex-col items-center gap-3 text-center">
+        <div className="mt-8 flex flex-col items-center gap-3 text-center">
           <p className="text-sm text-muted-foreground">
             {tr({
               fr: "Pour plus de formations, cliquez sur le bouton ci-dessous",
@@ -102,25 +86,18 @@ export function FormationsSection() {
           </p>
           <Link
             to="/formations"
-            className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 text-sm text-white transition-opacity hover:opacity-90"
-            style={{ background: "var(--primary)", fontWeight: 600 }}
+            className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 text-sm border border-border bg-transparent text-foreground"
+            style={{ fontWeight: 600 }}
           >
             {tr({ fr: "Explorer l'Académie ForTechLab", en: "Explore ForTechLab Academy" })}
             <ChevronRight className="size-4" />
           </Link>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="relative mt-12 overflow-hidden rounded-[2rem] p-7 sm:p-8 shadow-2xl shadow-primary/20"
-          style={{
-            background: "linear-gradient(135deg, var(--primary) 0%, #0f4c81 100%)",
-            color: "white",
-          }}
+        <div
+          className="relative mt-12 overflow-hidden rounded-[1.5rem] p-7 sm:p-8"
+          style={{ background: "var(--primary)", color: "white" }}
         >
-          <div className="absolute -top-10 -left-10 size-32 rounded-full bg-white/10 blur-3xl" />
-          <div className="absolute -bottom-8 right-0 size-40 rounded-full bg-cyan-300/20 blur-3xl" />
-          <div className="absolute inset-0 border border-white/10 rounded-[2rem]" />
-
           <div className="relative flex flex-col items-center text-center gap-6 lg:items-center">
             <div className="max-w-2xl">
               <h3 className="text-xl" style={{ fontWeight: 700, color: "white" }}>
@@ -137,7 +114,7 @@ export function FormationsSection() {
             <div className="flex flex-col sm:flex-row sm:justify-center gap-3 mt-auto">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-6 text-sm border border-white/30 bg-white text-foreground transition-colors hover:bg-secondary"
+                className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-6 text-sm bg-white text-foreground"
                 style={{ fontWeight: 600 }}
               >
                 {tr({ fr: "Demandez un devis personnalisé", en: "Request a customized quote" })}
@@ -145,7 +122,7 @@ export function FormationsSection() {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

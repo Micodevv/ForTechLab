@@ -25,12 +25,12 @@ export function Footer() {
   }[lang];
 
   return (
-    <footer className="bg-[var(--navy)] text-[var(--navy-foreground)]">
+    <footer className="bg-white text-[var(--foreground)] border-t border-[var(--border)]">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-5 max-w-xs">
-            <Logo light/>
-            <p className="text-sm leading-relaxed text-[var(--navy-foreground)]/70">
+            <Logo monochrome />
+            <p className="text-sm leading-relaxed text-[var(--muted-foreground)]">
               {tr({
                 fr: "Entreprise ImpactTech africaine au service de la transformation numérique et du développement durable.",
                 en: "African ImpactTech company driving digital transformation and sustainable development.",
@@ -41,7 +41,7 @@ export function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="grid place-items-center size-9 rounded-lg bg-white/10 hover:bg-primary transition-colors"
+                  className="grid place-items-center size-9 rounded-lg border border-[var(--border)] bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white transition-colors"
                   aria-label="social link"
                 >
                   <Icon className="size-4" />
@@ -75,7 +75,7 @@ export function Footer() {
           </FooterCol>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-[var(--navy-foreground)]/60">
+        <div className="mt-14 pt-6 border-t border-[var(--border)] flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-[var(--muted-foreground)]">
           <p>© {new Date().getFullYear()} ForTechLab. {tr({ fr: "Tous droits réservés.", en: "All rights reserved." })}</p>
         </div>
       </div>
@@ -86,7 +86,7 @@ export function Footer() {
 function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-4">
-      <h4 className="text-white" style={{ fontFamily: "var(--font-display)" }}>
+      <h4 className="text-[var(--foreground)]" style={{ fontFamily: "var(--font-display)" }}>
         {title}
       </h4>
       <ul className="flex flex-col gap-2.5">{children}</ul>
@@ -99,7 +99,7 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
     <li>
       <Link
         to={to}
-        className="text-sm text-[var(--navy-foreground)]/70 hover:text-[var(--cyan)] transition-colors"
+        className="text-sm text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
       >
         {children}
       </Link>
@@ -109,8 +109,8 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
 
 function ContactItem({ icon: Icon, children }: { icon: typeof Mail; children: React.ReactNode }) {
   return (
-    <li className="flex items-center gap-2.5 text-sm text-[var(--navy-foreground)]/70">
-      <Icon className="size-4 text-[var(--cyan)] shrink-0" />
+    <li className="flex items-center gap-2.5 text-sm text-[var(--muted-foreground)]">
+      <Icon className="size-4 text-[var(--primary)] shrink-0" />
       {children}
     </li>
   );

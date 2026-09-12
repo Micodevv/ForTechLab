@@ -8,13 +8,7 @@ export function CtaBand() {
   return (
     <section className="py-16 lg:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-navy px-8 py-14 lg:px-16 lg:py-20 text-center">
-          {/* decorative */}
-          <div className="absolute -top-16 -left-10 size-64 rounded-full bg-white/10 blur-2xl" />
-          <div className="absolute -bottom-20 -right-10 size-72 rounded-full bg-[var(--cyan)]/20 blur-2xl" />
-          <div className="absolute top-8 right-10 size-16 rounded-2xl bg-white/10 rotate-12" />
-          <div className="absolute bottom-10 left-12 size-10 rounded-full bg-[var(--amber)]/80" />
-
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#111827] px-8 py-14 lg:px-16 lg:py-20 text-center border border-white/10">
           <div className="relative flex flex-col items-center gap-6 max-w-2xl mx-auto">
             <h2 className="text-white text-[2rem] md:text-[2.8rem] leading-[1.1]" style={{ fontWeight: 800 }}>
               {tr({

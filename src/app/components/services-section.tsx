@@ -1,12 +1,11 @@
 import { Link } from "react-router";
-import { motion } from "motion/react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "../i18n";
 import { services } from "../data";
 
 export function ServicesSection() {
-  const { t, tr } = useI18n();
+  const { tr } = useI18n();
 
   return (
     <section id="services" className="py-16 lg:py-12 scroll-mt-20">
@@ -26,48 +25,37 @@ export function ServicesSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((s, i) => (
-            <motion.div
-              key={s.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-            >
+          {services.map((s) => (
+            <div key={s.id}>
               <Link
                 to="/contact"
-                className="group block h-full rounded-2xl border border-border bg-card p-7"
+                className="group block h-full rounded-[0.95rem] border border-border bg-white p-5 transition-colors hover:border-border"
               >
-                <div className="flex items-start justify-between mb-5">
+                <div className="mb-5 flex items-center justify-between gap-4">
                   <div
-                    className={`grid place-items-center size-12 rounded-xl ${s.iconBgClassName ?? "bg-primary/10"} ${s.iconClassName ?? "text-primary"}`}
+                    className={`grid place-items-center size-11 rounded-[0.75rem] ${s.iconBgClassName ?? "bg-primary/10"} ${s.iconClassName ?? "text-primary"}`}
                   >
-                    <s.icon className="size-6" />
+                    <s.icon className="size-5" />
                   </div>
-                  <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <ArrowUpRight className="size-4 text-muted-foreground" />
                 </div>
-                <h3 className="mb-2" style={{ fontWeight: 600 }}>
+
+                <h3 className="mb-2 text-[1.2rem] leading-snug" style={{ fontWeight: 700 }}>
                   {tr(s.title)}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {tr(s.desc)}
                 </p>
-                {/* <ul className="flex flex-col gap-2">
-                  {tr(s.features).map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm">
-                      <Check className="size-4 text-primary shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul> */}
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
       <div className="flex justify-center mt-8">
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all shrink-0"
+          className="inline-flex items-center gap-2 rounded-full h-12 px-6 text-sm border border-border bg-transparent text-foreground shrink-0"
+          style={{ fontWeight: 600 }}
         >
           {tr({ fr: "Voir tous nos services", en: "See all services" })}{" "}
           <ArrowUpRight className="size-4" />

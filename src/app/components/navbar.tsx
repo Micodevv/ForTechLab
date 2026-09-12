@@ -45,7 +45,9 @@ export function Navbar() {
 
   return (
     <header
-      className="sticky top-0 z-50 transition-all duration-300 bg-white shadow-[0_4px_24px_-12px_rgba(11,20,55,0.18)]"
+      className={`sticky top-0 z-50 border-b border-border ${
+        scrolled ? "bg-[#fefefe]" : "bg-[#fefefe]"
+      }`}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-[72px] flex items-center justify-between gap-4">
         <Logo />
@@ -55,10 +57,10 @@ export function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`px-3.5 py-2 rounded-lg text-sm transition-colors ${
+              className={`px-3.5 py-2 rounded-md text-sm ${
                 isActive(l.to)
-                  ? "text-primary text-primary font-medium"
-                  : "text-foreground/80 hover:text-navy"
+                  ? "text-primary font-medium"
+                  : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {t(l.key)}
@@ -69,18 +71,17 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggle}
-            className="hidden sm:flex items-center gap-1.5 px-3 h-9 rounded-lg border border-border text-sm hover:bg-secondary transition-colors"
-            style={{ fontFamily: "var(--font-mono)" }}
+            className="hidden sm:flex items-center gap-1.5 px-3 h-9 rounded-full border border-border bg-white text-sm"
+            style={{ fontFamily: "var(--font-sans)" }}
             aria-label="Switch language"
           >
             {flagIcon}
-            {/* <Globe className="size-4 text-primary" /> */}
             {lang.toUpperCase()}
           </button>
 
           <Link
             to="/contact"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-5 h-9 text-sm text-white transition-opacity hover:opacity-90"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-5 h-9 text-sm text-white"
             style={{ background: "var(--primary)", fontWeight: 600 }}
           >
             {t("cta.contact")} <ArrowRight className="size-4" />
@@ -90,7 +91,7 @@ export function Navbar() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <button
-                className="lg:hidden size-9 rounded-lg border border-border flex items-center justify-center hover:bg-secondary transition-colors"
+                className="lg:hidden size-9 rounded-lg border border-border flex items-center justify-center bg-white"
                 aria-label="Menu"
               >
                 <Menu className="size-5" />
@@ -107,9 +108,9 @@ export function Navbar() {
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className={`px-3 py-2.5 rounded-lg transition-colors ${
+                    className={`px-3 py-2.5 rounded-lg ${
                       isActive(l.to)
-                        ? "text-primary bg-primary/8 font-medium"
+                        ? "text-primary bg-primary/5 font-medium"
                         : "hover:bg-secondary"
                     }`}
                   >
@@ -120,8 +121,8 @@ export function Navbar() {
               <div className="mt-6 flex flex-col gap-3">
                 <button
                   onClick={toggle}
-                  className="flex items-center justify-center gap-2 h-10 rounded-lg border border-border text-sm"
-                  style={{ fontFamily: "var(--font-mono)" }}
+                  className="flex items-center justify-center gap-2 h-10 rounded-lg border border-border text-sm bg-white"
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   {flagIcon}
                   {lang === "fr" ? "Français" : "English"}

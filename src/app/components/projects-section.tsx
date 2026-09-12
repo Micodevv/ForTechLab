@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -37,8 +36,8 @@ export function ProjectsSection() {
               onClick={() => setActive(tag)}
               className={`px-4 py-2 rounded-full text-sm transition-colors border ${
                 active === tag
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-white border-border hover:border-primary text-foreground/80"
+                  ? "bg-primary text-primary-foreground border-transparent"
+                  : "bg-white border-border hover:border-border text-foreground/80"
               }`}
             >
               {tag === "all" ? tr({ fr: "Tous", en: "All" }) : tag}
@@ -46,18 +45,9 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <motion.div layout className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence mode="popLayout">
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((p) => (
-              <motion.article
-                key={p.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.35 }}
-                className="group rounded-3xl overflow-hidden border border-border bg-card hover:shadow-2xl hover:shadow-primary/10 transition-shadow"
-              >
+              <article key={p.id} className="group rounded-3xl overflow-hidden border border-border bg-card">
                 <div className="relative overflow-hidden aspect-[4/3] bg-muted">
                   <ImageWithFallback
                     src={p.image}
@@ -65,7 +55,7 @@ export function ProjectsSection() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-xs" style={{ fontFamily: "var(--font-mono)" }}>
+                  <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-xs" style={{ fontFamily: "var(--font-sans)" }}>
                     {p.year}
                   </span>
                   <div className="absolute bottom-3 right-3 size-10 rounded-full bg-primary text-primary-foreground grid place-items-center translate-y-12 group-hover:translate-y-0 transition-transform">
@@ -73,7 +63,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <span className="text-xs text-primary" style={{ fontFamily: "var(--font-mono)" }}>
+                  <span className="text-xs text-primary" style={{ fontFamily: "var(--font-sans)" }}>
                     {tr(p.category)}
                   </span>
                   <h3 className="mt-1.5 mb-2" style={{ fontWeight: 600 }}>{p.title}</h3>
@@ -86,19 +76,12 @@ export function ProjectsSection() {
                     ))}
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
-          </AnimatePresence>
-        </motion.div>
+        </div>
 
         {/* View all button */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="mt-12 flex justify-center"
-        >
+        <div className="mt-12 flex justify-center">
           <Link
             to="/projets"
             className="inline-flex items-center gap-2 rounded-full h-12 px-8 text-sm border border-border hover:bg-secondary transition-colors"
@@ -107,7 +90,7 @@ export function ProjectsSection() {
             {tr({ fr: "Voir tous les projets", en: "View all projects" })}
             <ChevronRight className="size-4" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

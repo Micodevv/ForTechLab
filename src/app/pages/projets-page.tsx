@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, ArrowRight, Quote } from "lucide-react";
 import { SectionHeading, Eyebrow } from "../components/section-heading";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -22,7 +21,6 @@ export default function ProjetsPage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-28">
-        <div className="absolute -top-32 right-0 size-[600px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "Portfolio", en: "Portfolio" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
@@ -66,8 +64,8 @@ export default function ProjetsPage() {
                 onClick={() => setActive(tag)}
                 className={`px-4 py-2 rounded-full text-sm transition-colors border ${
                   active === tag
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-white border-border hover:border-primary text-foreground/80"
+                    ? "bg-primary text-primary-foreground border-transparent"
+                    : "bg-white border-border hover:border-border text-foreground/80"
                 }`}
               >
                 {tag === "all" ? tr({ fr: "Tous", en: "All" }) : tag}
@@ -76,18 +74,9 @@ export default function ProjetsPage() {
           </div>
 
           {/* Grid */}
-          <motion.div layout className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatePresence mode="popLayout">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((p) => (
-                <motion.article
-                  key={p.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.35 }}
-                  className="group rounded-3xl overflow-hidden border border-border bg-card hover:shadow-2xl hover:shadow-primary/10 transition-shadow"
-                >
+                <article key={p.id} className="group rounded-3xl overflow-hidden border border-border bg-card">
                   <div className="relative overflow-hidden aspect-[4/3] bg-muted">
                     <ImageWithFallback
                       src={p.image}
@@ -95,7 +84,7 @@ export default function ProjetsPage() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-xs" style={{ fontFamily: "var(--font-mono)" }}>
+                    <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-xs" style={{ fontFamily: "var(--font-sans)" }}>
                       {p.year}
                     </span>
                     <div className="absolute bottom-3 right-3 size-10 rounded-full bg-primary text-primary-foreground grid place-items-center translate-y-12 group-hover:translate-y-0 transition-transform">
@@ -103,20 +92,20 @@ export default function ProjetsPage() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <span className="text-xs text-primary" style={{ fontFamily: "var(--font-mono)" }}>{tr(p.category)}</span>
+                    <span className="text-xs text-primary" style={{ fontFamily: "var(--font-sans)" }}>{tr(p.category)}</span>
                     <h3 className="mt-1.5 mb-2" style={{ fontWeight: 600 }}>{p.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-3">{tr(p.desc)}</p>
 
                     {/* Challenge / Solution */}
                     <div className="rounded-xl bg-secondary/60 p-3.5 mb-4 space-y-2">
                       <div>
-                        <p className="text-xs text-muted-foreground mb-0.5" style={{ fontFamily: "var(--font-mono)" }}>
+                        <p className="text-xs text-muted-foreground mb-0.5" style={{ fontFamily: "var(--font-sans)" }}>
                           {tr({ fr: "Défi", en: "Challenge" })}
                         </p>
                         <p className="text-xs leading-relaxed">{tr(p.challenge)}</p>
                       </div>
                       <div>
-                        <p className="text-xs text-muted-foreground mb-0.5" style={{ fontFamily: "var(--font-mono)" }}>
+                        <p className="text-xs text-muted-foreground mb-0.5" style={{ fontFamily: "var(--font-sans)" }}>
                           {tr({ fr: "Solution", en: "Solution" })}
                         </p>
                         <p className="text-xs leading-relaxed">{tr(p.solution)}</p>
@@ -131,10 +120,9 @@ export default function ProjetsPage() {
                       ))}
                     </div>
                   </div>
-                </motion.article>
+                </article>
               ))}
-            </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -147,15 +135,8 @@ export default function ProjetsPage() {
             title={tr({ fr: "Ce que disent nos clients", en: "What our clients say" })}
           />
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ delay: i * 0.08 }}
-                className="flex flex-col rounded-3xl bg-card border border-border p-7 hover:border-primary hover:shadow-xl hover:shadow-primary/5 transition-all"
-              >
+            {testimonials.map((t) => (
+              <div key={t.name} className="flex flex-col rounded-3xl bg-card border border-border p-7">
                 <Quote className="size-8 text-primary/30 mb-4" />
                 <p className="text-muted-foreground leading-relaxed flex-1 italic mb-6">"{tr(t.quote)}"</p>
                 <div className="flex items-center gap-3">
@@ -169,7 +150,7 @@ export default function ProjetsPage() {
                     <p className="text-xs text-muted-foreground">{tr(t.role)}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

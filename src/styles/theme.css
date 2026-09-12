@@ -2,56 +2,55 @@
 
 :root {
   --font-size: 16px;
-  --font-display: 'Sora', system-ui, sans-serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Manrope', 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'Manrope', 'Segoe UI', sans-serif;
 
   --background: #ffffff;
-  --foreground: #0d2748;
+  --foreground: #171a1f;
   --card: #ffffff;
-  --card-foreground: #0d2748;
+  --card-foreground: #171a1f;
   --popover: #ffffff;
-  --popover-foreground: #0d2748;
-  --primary: #1990c0;
+  --popover-foreground: #171a1f;
+  --primary: #128db7;
   --primary-foreground: #ffffff;
-  --secondary: #e4eff9;
-  --secondary-foreground: #0d2748;
-  --muted: #f0f5fa;
-  --muted-foreground: #4e6883;
-  --accent: #d6eaf8;
-  --accent-foreground: #0d2748;
-  --destructive: #d4183d;
+  --secondary: #edf7fb;
+  --secondary-foreground: #1a1f29;
+  --muted: #f8fafb;
+  --muted-foreground: #5f6975;
+  --accent: #dfeef7;
+  --accent-foreground: #1a1f29;
+  --destructive: #c74d4d;
   --destructive-foreground: #ffffff;
-  --border: rgba(13, 39, 72, 0.1);
+  --border: rgba(17, 24, 39, 0.1);
   --input: transparent;
-  --input-background: #f0f5fa;
-  --switch-background: #c2cdd8;
+  --input-background: #f4f8fa;
+  --switch-background: #d9e8ee;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #1990c0;
+  --ring: rgba(17, 24, 39, 0.08);
 
-  /* Brand tokens — ForTechLab palette */
-  --navy: #0d2748;
-  --navy-foreground: #e0f0fa;
-  --brand-blue: #1990c0;
-  --brand-blue-bright: #2ab5d8;
-  --cyan: #25bfba;
-  --amber: #f07a3a;
+  --navy: #0f1724;
+  --navy-foreground: #f3f7fa;
+  --brand-blue: #128db7;
+  --brand-blue-bright: #1da9d3;
+  --cyan: #cfeaf5;
+  --amber: #d8b678;
 
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 1rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --chart-1: #128db7;
+  --chart-2: #71bfd2;
+  --chart-3: #a3d7e9;
+  --chart-4: #d8b678;
+  --chart-5: #e5edf1;
+  --radius: 0.75rem;
+  --sidebar: #f9f7f4;
+  --sidebar-foreground: #1b1b1b;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f6f7;
+  --sidebar-accent-foreground: #1b1b1b;
+  --sidebar-border: rgba(17, 24, 39, 0.1);
+  --sidebar-ring: rgba(17, 24, 39, 0.08);
 }
 
 .dark {
@@ -61,8 +60,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: #128db7;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -76,14 +75,14 @@
   --ring: oklch(0.439 0 0);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --chart-1: #128db7;
+  --chart-2: #71bfd2;
+  --chart-3: #a3d7e9;
+  --chart-4: #d8b678;
+  --chart-5: #dfeef7;
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: #128db7;
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -147,31 +146,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+    background: var(--background);
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
   }
 
-  /* Hide scrollbars until scrolling */
+  a {
+    text-decoration: none;
+  }
+
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 9999px;
   }
-  :hover::-webkit-scrollbar-thumb { background: rgba(25, 144, 192, 0.3); }
-  ::selection { background: var(--brand-blue); color: #fff; }
-
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
+  :hover::-webkit-scrollbar-thumb { background: rgba(17, 24, 39, 0.18); }
+  ::selection { background: rgba(18, 141, 183, 0.12); color: var(--foreground); }
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: auto;
   }
 
   h1 {
@@ -208,6 +208,13 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
+  }
+
+  button.rounded-full,
+  button[class*='rounded-full'],
+  a.rounded-full,
+  a[class*='rounded-full'] {
+    border-radius: var(--radius) !important;
   }
 
   input {

@@ -89,10 +89,10 @@ export function ContactForm({
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center text-center gap-5 py-14 px-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary border border-primary/20">
+      <div className="flex flex-col items-center text-center gap-5 py-14 px-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary border border-border">
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl" />
-          <div className="relative grid place-items-center size-16 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30">
+          <div className="relative grid place-items-center size-16 rounded-full bg-primary text-primary-foreground shadow-sm">
             <CheckCircle2 className="size-8" />
           </div>
         </div>
@@ -112,7 +112,7 @@ export function ContactForm({
   return (
     <form ref={formRef} onSubmit={onSubmit} className="flex flex-col gap-4">
       {context && (
-        <div className="flex items-center gap-2.5 text-sm px-4 py-5 rounded-xl bg-navy border border-navy/20 text-white">
+        <div className="flex items-center gap-2.5 text-sm px-4 py-5 rounded-xl bg-navy border border-white/10 text-white">
           <Tag className="size-5 shrink-0" />
           <span style={{ fontWeight: 500, fontSize: "1rem" }}>{context}</span>
         </div>
@@ -129,7 +129,7 @@ export function ContactForm({
             name="user_name"
             required
             placeholder={t("form.placeholder.name")}
-            className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
+            className="peer w-full h-12 rounded-xl border border-border px-4 pl-10 text-sm outline-none"
           />
         </FloatingField>
 
@@ -144,7 +144,7 @@ export function ContactForm({
             type="email"
             required
             placeholder="email@exemple.com"
-            className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
+            className="peer w-full h-12 rounded-xl border border-border px-4 pl-10 text-sm outline-none"
           />
         </FloatingField>
 
@@ -158,7 +158,7 @@ export function ContactForm({
             name="user_phone"
             type="tel"
             placeholder="+229"
-            className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
+            className="peer w-full h-12 rounded-xl border border-border px-4 pl-10 text-sm outline-none"
           />
         </FloatingField>
 
@@ -172,7 +172,7 @@ export function ContactForm({
             name="subject"
             required
             placeholder={subjectLabel}
-              className="peer w-full h-12 rounded-xl border border-navy/20 px-4 pl-10 text-sm outline-none"
+              className="peer w-full h-12 rounded-xl border border-border px-4 pl-10 text-sm outline-none"
             />
         </FloatingField>
       </div>
@@ -184,7 +184,7 @@ export function ContactForm({
           required
           rows={5}
           placeholder={messagePlaceholder}
-          className="peer w-full rounded-xl border border-navy/20 px-4 pl-10 py-3 text-sm outline-none"
+          className="peer w-full rounded-xl border border-border px-4 pl-10 py-3 text-sm outline-none"
         />
       </FloatingField>
 
@@ -205,7 +205,7 @@ export function ContactForm({
         <Button
           type="submit"
           disabled={loading}
-          className="rounded-full h-11 px-7 gap-2 shadow-lg shadow-primary/20"
+          className="rounded-full h-11 px-7 gap-2 shadow-sm"
         >
           {loading ? (
             <>
