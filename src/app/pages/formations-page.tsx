@@ -141,16 +141,16 @@ export default function FormationsPage() {
                 </div>
 
                 <div className="px-7 pt-5 pb-7 mt-auto">
-                  <p className="text-xs text-muted-foreground mb-3" style={{ fontFamily: "var(--font-sans)" }}>
+                  {/* <p className="text-xs text-muted-foreground mb-3" style={{ fontFamily: "var(--font-sans)" }}>
                     {tr({ fr: "Programme — ", en: "Program — " })}{tr(f.modules).length} {tr({ fr: "modules", en: "modules" })}
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-6">
                     {tr(f.modules).map((m) => (
-                      <span key={m.name} className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground border border-border">
+                      <span key={m.name} className="text-xs px-2.5 py-1 rounded-full bg-gray-50 text-secondary-foreground ">
                         {m.name}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
 
                   <Link
                     to={`/formation/${f.id}`}

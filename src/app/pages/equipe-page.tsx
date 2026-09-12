@@ -80,7 +80,7 @@ export default function EquipePage() {
       </section>
 
       {/* Why join us */}
-      <section className="py-20 lg:py-24" style={{ background: "#f3f6f8" }}>
+      <section className="py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             align="center"

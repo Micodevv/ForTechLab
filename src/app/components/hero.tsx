@@ -9,11 +9,11 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden pb-2">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-10 pb-0 lg:pt-20 lg:pb-18 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-center">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-10 pb-0 lg:pt-20 lg:pb-18 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10">
         <div className="flex flex-col gap-6">
-          <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-white border border-border text-sm text-foreground/80">  
+          {/* <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-white border border-border text-sm text-foreground/80">  
             {tr({ fr: "ImpactTech · Transformation numérique · Innovation", en: "ImpactTech · Digital Transformation · Innovation" })}
-          </span>
+          </span> */}
 
           <h1 className="max-w-xl text-[2.35rem] sm:text-[2.9rem] lg:text-[3.8rem] leading-[0.94] tracking-[-0.06em]" style={{ fontWeight: 800 }}>
             {tr({ fr: "Construisons l’avenir numérique de l’Afrique", en: "Let's build Africa's digital future" })}

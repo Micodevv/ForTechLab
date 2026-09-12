@@ -11,7 +11,7 @@ export function Footer() {
     fr: [
       { label: "À propos", to: "/a-propos" },
       { label: "Notre équipe", to: "/equipe" },
-      { label: "Projets", to: "/projets" },
+      // { label: "Projets", to: "/projets" },
       { label: "Académie ForTechLab", to: "/formations" },
       { label: "Rejoindre l'équipe", to: "/equipe" },
     ],
@@ -41,7 +41,7 @@ export function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="grid place-items-center size-9 rounded-lg border border-[var(--border)] bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white transition-colors"
+                  className="grid place-items-center size-9 rounded-lg bg-[var(--muted)] "
                   aria-label="social link"
                 >
                   <Icon className="size-4" />

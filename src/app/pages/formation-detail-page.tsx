@@ -69,7 +69,7 @@ export default function FormationDetailPage() {
       </section>
 
       {/* Modules — presented as pricing plan cards */}
-      <section className="py-12 lg:py-12" style={{ background: "#f3f6f8" }}>
+      <section className="py-12 lg:py-12">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
@@ -89,12 +89,12 @@ export default function FormationDetailPage() {
                 {/* Module number badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span
-                    className="grid place-items-center size-9 rounded-xl bg-primary/10 text-primary shrink-0 text-sm"
+                    className="grid place-items-center size-12 rounded-xl text-primary shrink-0 text-lg"
                     style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="flex items-center gap-1.5 text-xs text-muted-foreground px-2.5 py-1 rounded-full bg-secondary border border-border">
+                  <span className="flex items-center gap-1.5 text-xs text-muted-foreground px-2.5 py-1 rounded-full bg-gray-50">
                     <Clock className="size-3" />
                     {m.duration}
                   </span>
