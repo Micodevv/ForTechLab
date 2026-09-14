@@ -71,7 +71,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggle}
-            className="hidden sm:flex items-center gap-1.5 px-3 h-9 rounded-full border border-border bg-white text-sm"
+            className="hidden sm:flex items-center gap-1.5 px-3 h-9 rounded-full border border-border bg-white text-sm cursor-pointer"
             style={{ fontFamily: "var(--font-sans)" }}
             aria-label="Switch language"
           >

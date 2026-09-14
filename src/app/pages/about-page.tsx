@@ -182,7 +182,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="rounded-[1.5rem] overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&h=680&fit=crop&auto=format&q=80"
                 alt={tr({ fr: "Professionnels africains au travail", en: "African professionals at work" })}
@@ -199,7 +199,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
             {/* Left: sticky image + ambition */}
             <div className="lg:sticky lg:top-28">
-              <div className="rounded-[2rem] overflow-hidden mb-6" style={{ boxShadow: "0 20px 60px -16px rgba(13,39,72,0.18)" }}>
+              <div className="rounded-[1.5rem] overflow-hidden mb-6">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=900&h=700&fit=crop&auto=format&q=80"
                   alt={tr({ fr: "Équipe ForTechLab en réunion", en: "ForTechLab team in meeting" })}
