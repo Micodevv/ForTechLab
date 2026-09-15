@@ -8,7 +8,7 @@ export function CtaBand() {
   return (
     <section className="py-16 lg:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#111827] px-8 py-14 lg:px-16 lg:py-20 text-center border border-white/10">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#022962] px-8 py-14 lg:px-16 lg:py-20 text-center border border-white/10">
           <div className="relative flex flex-col items-center gap-6 max-w-2xl mx-auto">
             <h2 className="text-white text-[2rem] md:text-[2.8rem] leading-[1.1]" style={{ fontWeight: 800 }}>
               {tr({
