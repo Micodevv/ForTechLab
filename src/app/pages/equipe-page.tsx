@@ -80,7 +80,7 @@ export default function EquipePage() {
       </section>
 
       {/* Why join us */}
-      <section className="py-20 lg:py-24">
+      <section className="py-20 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             align="center"
@@ -109,7 +109,7 @@ export default function EquipePage() {
       </section>
 
       {/* Join form */}
-      <section id="rejoindre" className="py-20 lg:py-28 scroll-mt-20">
+      <section id="rejoindre" className="py-20 lg:py-16 scroll-mt-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 lg:sticky lg:top-28">
             <Eyebrow>{tr({ fr: "Candidature", en: "Application" })}</Eyebrow>

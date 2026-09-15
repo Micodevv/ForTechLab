@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] ${
+      className={`items-center gap-2 text-xs uppercase tracking-[0.18em]  ${
         light ? "text-[var(--cyan)]" : "text-primary"
       }`}
-      style={{ fontFamily: "var(--font-sans)" }}
+      style={{ fontFamily: "var(--font-mono)" }}
     >
       <span className="size-1.5 rounded-full bg-current" />
       {children}
