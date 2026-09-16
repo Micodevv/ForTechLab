@@ -5,7 +5,7 @@ import FormationDetailPage from "./pages/formation-detail-page";
 import ContactPage from "./pages/contact-page";
 import ServicesPage from "./pages/services-page";
 import FormationsPage from "./pages/formations-page";
-import ProjetsPage from "./pages/projets-page";
+// import ProjetsPage from "./pages/projets-page";
 import EquipePage from "./pages/equipe-page";
 import AboutPage from "./pages/about-page";
 
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       { path: "services", Component: ServicesPage },
       { path: "formations", Component: FormationsPage },
       { path: "formation/:id", Component: FormationDetailPage },
-      { path: "projets", Component: ProjetsPage },
+      // { path: "projets", Component: ProjetsPage },
       { path: "equipe", Component: EquipePage },
       { path: "contact", Component: ContactPage },
       { path: "*", Component: HomePage },
