@@ -194,7 +194,7 @@ export default function AboutPage() {
       </section>
 
       {/* ABOUT CONTENT */}
-      <section className="py-4 lg:py-12">
+      <section className="py-8 lg:py-12">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
             {/* Left: sticky image + ambition */}
@@ -270,7 +270,7 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES SECTION */}
-      <section className="py-8 lg:py-12 mb-8" style={{ background: "#f3f6f8" }}>
+      <section className="py-12 lg:py-12" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="text-center mb-8">
             <span
