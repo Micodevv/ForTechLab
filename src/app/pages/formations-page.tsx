@@ -19,7 +19,7 @@ export default function FormationsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-20">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "L'Académie Fortechlab", en: "Fortechlab Academy" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
@@ -78,7 +78,7 @@ export default function FormationsPage() {
         </div>
       </section>
 
-      <div className="py-16 lg:py-24">
+      <div className="py-12 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {visibleFormations.map((f) => (
@@ -171,7 +171,7 @@ export default function FormationsPage() {
       </div>
 
       {/* CTA Band */}
-      <section className="py-20 bg-[var(--navy)] text-[var(--navy-foreground)]">
+      <section className="py-12 bg-[var(--navy)] text-[var(--navy-foreground)]">
         <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
           <Eyebrow light>{tr({ fr: "Besoin de conseils ?", en: "Need guidance?" })}</Eyebrow>
           <h2 className="text-white mt-4 text-[2rem] md:text-[2.6rem]" style={{ fontWeight: 700 }}>

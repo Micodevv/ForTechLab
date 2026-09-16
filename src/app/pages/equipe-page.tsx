@@ -54,7 +54,7 @@ export default function EquipePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-20 lg:py-20">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "Notre équipe", en: "Our team" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
@@ -76,11 +76,12 @@ export default function EquipePage() {
               </div>
             ))}
           </div> */}
+
         </div>
       </section>
 
       {/* Why join us */}
-      <section className="py-20 lg:py-16">
+      <section className="py-12 lg:py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             align="center"
@@ -92,7 +93,7 @@ export default function EquipePage() {
             })}
           />
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {perks.map((p) => (
               <div key={p.title.fr} className="flex items-start gap-4 rounded-2xl bg-white border border-slate-200 p-6">
                 <div className="grid place-items-center size-11 rounded-xl bg-primary/8 text-primary shrink-0">
@@ -109,7 +110,7 @@ export default function EquipePage() {
       </section>
 
       {/* Join form */}
-      <section id="rejoindre" className="py-20 lg:py-16 scroll-mt-20">
+      <section id="rejoindre" className="pb-12 lg:py-16 scroll-mt-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 lg:sticky lg:top-28">
             <Eyebrow>{tr({ fr: "Candidature", en: "Application" })}</Eyebrow>
@@ -143,7 +144,7 @@ export default function EquipePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[var(--navy)] text-[var(--navy-foreground)]">
+      <section className="py-12 bg-[var(--navy)] text-[var(--navy-foreground)]">
         <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
           <Eyebrow light>{tr({ fr: "Des questions ?", en: "Any questions?" })}</Eyebrow>
           <h2 className="text-white mt-4 text-[1.8rem] md:text-[2.4rem]" style={{ fontWeight: 700 }}>

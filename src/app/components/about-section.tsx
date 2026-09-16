@@ -50,9 +50,9 @@ export function AboutSection() {
   const { tr } = useI18n();
 
   return (
-    <section id="a-propos" className="py-20 lg:py-10 scroll-mt-20 overflow-hidden">
+    <section id="a-propos" className="py-8 lg:py-10 scroll-mt-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="mb-14">
+        <div className="mb-4">
           <span
             className="inline-block mb-4 px-3.5 py-1 rounded-full text-xs tracking-widest uppercase"
             style={{ background: "var(--secondary)", color: "var(--brand-blue)", fontFamily: "var(--font-sans)" }}
@@ -61,7 +61,7 @@ export function AboutSection() {
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative">
             <div className="relative rounded-[1rem] overflow-hidden border border-border bg-card">
               <ImageWithFallback

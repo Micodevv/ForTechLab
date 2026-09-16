@@ -5,7 +5,7 @@ export function JoinSection() {
   const { tr } = useI18n();
 
   return (
-    <section id="rejoindre" className="py-20 lg:py-16 bg-white scroll-mt-20">
+    <section id="rejoindre" className="py-8 lg:py-16 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <div className="flex flex-col gap-6 lg:sticky lg:top-28">
           <h2 className="text-[2rem] md:text-[2.6rem] leading-[1.08]" style={{ fontWeight: 700 }}>

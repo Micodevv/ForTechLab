@@ -11,7 +11,7 @@ export function FormationsSection() {
   const preview = formations.slice(0, PREVIEW_COUNT);
 
   return (
-    <section id="formations" className="py-10 lg:py-12 bg-white scroll-mt-20">
+    <section id="formations" className="py-8 lg:py-12 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           align="center"
@@ -23,7 +23,7 @@ export function FormationsSection() {
           })}
         />
 
-        <div className="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           {preview.map((f) => (
             <div
               key={f.id}

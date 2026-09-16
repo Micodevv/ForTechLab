@@ -5,7 +5,7 @@ export function TeamSection() {
   const { tr } = useI18n();
 
   return (
-    <section id="equipe" className="py-20 lg:py-16 scroll-mt-20">
+    <section id="equipe" className="py-12 lg:py-16 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           align="center"

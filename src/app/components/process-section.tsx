@@ -9,7 +9,7 @@ export function ProcessSection() {
   const { tr } = useI18n();
 
   return (
-    <section className="py-20 lg:py-15" style={{ background: "#f3f6f8", color: "var(--foreground)" }}>
+    <section className="py-12 lg:py-15" style={{ background: "#f3f6f8", color: "var(--foreground)" }}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
         <SectionHeading
           align="center"
@@ -21,7 +21,7 @@ export function ProcessSection() {
           })}
         />
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {processSteps.map((step, i) => {
             const Icon = icons[i];
             return (

@@ -137,7 +137,7 @@ export default function AboutPage() {
     <div>
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white text-foreground">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 lg:py-16 grid lg:grid-cols-2 gap-12">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-12 lg:py-16 grid lg:grid-cols-2 gap-12">
           <div className="flex flex-col gap-6">
             <span
               className="inline-block self-start px-3.5 py-1 rounded-full text-xs tracking-widest uppercase"
@@ -194,7 +194,7 @@ export default function AboutPage() {
       </section>
 
       {/* ABOUT CONTENT */}
-      <section className="py-20 lg:py-16">
+      <section className="py-4 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
             {/* Left: sticky image + ambition */}
@@ -270,9 +270,9 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES SECTION */}
-      <section className="py-20 lg:py-24" style={{ background: "#f3f6f8" }}>
+      <section className="py-8 lg:py-24 mt-8" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <span
               className="inline-block mb-4 px-3.5 py-1 rounded-full text-xs tracking-widest uppercase"
               style={{ background: "rgba(18,141,183,0.08)", color: "var(--primary)", fontFamily: "var(--font-sans)" }}
