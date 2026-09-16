@@ -69,7 +69,7 @@ export default function FormationDetailPage() {
       </section>
 
       {/* Modules — presented as pricing plan cards */}
-      <section className="py-12 lg:py-12">
+      <section className="pt-8 pb-4 lg:py-12">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
@@ -126,7 +126,7 @@ export default function FormationDetailPage() {
       </section>
 
       {/* Inscription / Contact */}
-      <section id="inscription" className="py-16 lg:py-24 scroll-mt-20">
+      <section id="inscription" className="py-8 lg:py-24 scroll-mt-20">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <div className="text-center flex flex-col items-center gap-3 mb-10">
             <Eyebrow>{tr({ fr: "Inscription", en: "Enrollment" })}</Eyebrow>
