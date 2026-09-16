@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-20">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <div className="max-w-3xl">
             <Eyebrow light>{tr({ fr: "Nos Services", en: "Our Services" })}</Eyebrow>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
       <ProcessSection />
 
       {/* Contact section */}
-      <section className="py-4 pb-12 lg:py-28" style={{ background: "#f3f6f8" }}>
+      <section className="py-4 pb-12 lg:py-12" style={{ background: "#f3f6f8" }}>
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="lg:sticky lg:top-28 flex flex-col gap-5">

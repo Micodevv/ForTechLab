@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-16 lg:py-24">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-16 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "Contactez-nous", en: "Contact us" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.6rem] md:text-[3.8rem] leading-[1.05]" style={{ fontWeight: 800 }}>
@@ -34,7 +34,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-start">
           {/* Left: info */}
           <div className="flex flex-col gap-4 lg:sticky lg:top-28">

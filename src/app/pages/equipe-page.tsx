@@ -54,7 +54,7 @@ export default function EquipePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-20">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "Notre équipe", en: "Our team" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
@@ -110,7 +110,7 @@ export default function EquipePage() {
       </section>
 
       {/* Join form */}
-      <section id="rejoindre" className="pb-12 lg:py-16 scroll-mt-20">
+      <section id="rejoindre" className="pb-12 lg:py-12 scroll-mt-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 lg:sticky lg:top-28">
             <Eyebrow>{tr({ fr: "Candidature", en: "Application" })}</Eyebrow>

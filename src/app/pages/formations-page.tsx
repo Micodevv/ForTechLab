@@ -19,7 +19,7 @@ export default function FormationsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-20">
+      <section className="relative overflow-hidden bg-[var(--navy)] text-[var(--navy-foreground)] py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
           <Eyebrow light>{tr({ fr: "L'Académie Fortechlab", en: "Fortechlab Academy" })}</Eyebrow>
           <h1 className="text-white mt-4 text-[2.8rem] md:text-[4rem] leading-[1.04]" style={{ fontWeight: 800 }}>
@@ -78,7 +78,7 @@ export default function FormationsPage() {
         </div>
       </section>
 
-      <div className="py-12 lg:py-24">
+      <div className="py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {visibleFormations.map((f) => (

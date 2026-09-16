@@ -8,7 +8,7 @@ export function ServicesSection() {
   const { tr } = useI18n();
 
   return (
-    <section id="services" className="py-8 lg:py-12 scroll-mt-20">
+    <section id="services" className="py-8 lg:py-8 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <SectionHeading

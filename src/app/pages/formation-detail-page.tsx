@@ -126,7 +126,7 @@ export default function FormationDetailPage() {
       </section>
 
       {/* Inscription / Contact */}
-      <section id="inscription" className="py-8 lg:py-24 scroll-mt-20">
+      <section id="inscription" className="py-8 lg:py-12 scroll-mt-20">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <div className="text-center flex flex-col items-center gap-3 mb-10">
             <Eyebrow>{tr({ fr: "Inscription", en: "Enrollment" })}</Eyebrow>
